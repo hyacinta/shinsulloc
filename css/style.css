@@ -1,0 +1,191 @@
+/* navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 4rem;
+  color: #1C314F;
+  z-index: 9999;
+}
+.nav.scroll {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgba(255, 255, 255, .5);
+  border-bottom: 1px solid #CECECE;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .05);
+}
+.nav .container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.logo {
+  margin: 0;
+  align-self: center;
+}
+.menu {text-align: right;}
+.menu li {display: inline-block;}
+.menu a {
+  display: block;
+  margin: 0.8rem;
+  padding: 16px;
+  text-shadow:0 0 10px #fff;
+}
+
+/* visual */
+.visual {
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/main_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.mainText {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 372px;
+  margin: auto;
+  color: #1C314F;
+}
+.mainText p {margin-bottom: 1.6rem;}
+.mainText a {margin-top: 4rem;}
+
+
+/* content 영역 top, bottom padding */
+.inJeju, .vrTour, .teaser, .team {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+/* in JEJU */
+.inJeju {
+  text-align: center;
+  background-image: url('../images/inJeju_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: #324546;
+}
+.inJeju .title {margin-bottom: 8rem;}
+.inJeju .terroir {
+  margin-top: 8rem;
+  margin-bottom: 6.4rem;
+}
+.terroir li {
+  position: relative;
+  display: inline-block;
+  padding: 0 60px;
+  text-align: center;
+}
+.terroir li::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(50, 69, 70, .3);
+}
+.terroir li:last-child::after {display: none;}
+.terroir li p {margin-bottom: 0.8rem;}
+.terroir li h3 {margin-bottom: 0;}
+
+/* vrTour */
+.vrTour .row {margin-bottom: 10rem;}
+
+/* 서광차밭 */
+.teaGarden {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background-image: url('../images/teaGarden_bg.png');
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.teaGarden h3, .teaGarden p {text-shadow: 0 0 5px rgba(0, 0, 0, .1);}
+.teaGarden .btn-ghost-white {
+  margin-top: 2.4rem;
+  padding: 8px 20px;
+}
+.vrTour .explanation {
+  position: relative;
+  height: 322px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.vrTour .explanation.left {
+  text-align: right;
+  padding-right: 16px;
+}
+.vrTour .explanation.right {padding-left: 16px;}
+
+.vrTour .explanation a.btn-fill {
+  position: absolute;
+  bottom: 16px;
+}
+.vrTour .explanation.right a.btn-fill {left: 16px;}
+.vrTour .explanation.left a.btn-fill {right: 16px;}
+
+.teaser {background-color: #202020;}
+
+.team {
+  text-align: center;
+  color: #324546;
+}
+.team p {margin-bottom: 0.4rem;}
+.team h2 span {color: #b0b0b0;}
+
+.member {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5.6rem;
+}
+.member > li {
+  width: 30%;
+  margin-left: 8px;
+  margin-right: 8px;
+  text-align: center;
+}
+.member h3 {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 4rem;
+  padding: 60px 0;
+  border-radius: 100px;
+  background-color: #f0f0f0;
+  border: 1px solid #cecece;
+}
+.member .info {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 90px;
+  font-size: 2rem;
+  color: #707070;
+}
+
+/* footer */
+.footer {
+  padding: 80px 0 40px;
+  background-color: #f6f6f6;
+  text-align: center;
+  color: #324546;
+}
+.footer p {margin-bottom: 0.4rem;}
+.footer .copy {margin-top: 2.4rem;}
+.footer .link {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+.footer .link li {margin: 0 5.6rem;}
+.footer .link img {
+  width: auto;
+  height: 36px;
+}
