@@ -39,6 +39,11 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  color: #324546;
+  border-bottom: 1px solid #324546;
 }
 img {vertical-align: top;}
 
@@ -196,7 +201,7 @@ secondary: #707070;
 }
 .btn-fill {
   color: #fff;
-  background-color: #324546;
+  background-color: rgba(50, 69, 70, .8);
 }
 .btn-ghost-white {
   background-color: rgba(255, 255, 255, 0.5);
