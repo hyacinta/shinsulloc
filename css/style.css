@@ -1,6 +1,6 @@
 /* navigation */
 .nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
@@ -110,6 +110,9 @@
   text-align: center;
   cursor: pointer;
 }
+.terroir li * {
+  border-bottom: 1px solid transparent;
+}
 .terroir li::before {
   position: absolute;
   content: "";
@@ -118,6 +121,9 @@
   height: 12px;
   border-radius: 6px;
   background-color: #dedede;
+}
+.terroir li:hover * {
+  border-bottom: 1px solid rgba(50, 69, 70, .3);
 }
 .terroir li:hover::before {background-color: #b6cd3f;}
 .terroir li.teaGarden1::before {
@@ -143,7 +149,10 @@
   background-color: rgba(50, 69, 70, .3);
 }
 .terroir li:last-child::after {display: none;}
-.terroir li p {margin-bottom: 0.8rem;}
+.terroir li p {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
 .terroir li h3 {margin-bottom: 0;}
 
 
@@ -241,7 +250,7 @@
 .member h3 {
   width: 200px;
   height: 200px;
-  margin: 0 auto 4rem;
+  margin: 0 auto;
   padding: 60px 0;
   border-radius: 100px;
   background-color: #f0f0f0;
@@ -256,6 +265,21 @@
   font-size: 2rem;
   color: #707070;
 }
+
+.icon_mail, .icon_facebook, .icon_instagram {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+  padding-top: 24px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} 
+.icon_mail {background-image: url('../images/icon_mail.png');}
+.icon_facebook {background-image: url('../images/icon_facebook.png');}
+.icon_instagram {background-image: url('../images/icon_instagram.png');}
 
 /* footer */
 .footer {
