@@ -10,13 +10,14 @@
 </head>
 <body>
   <div class="wrap">
+    <a href="/" class="btn_top">상단으로 이동하기</a>
     <div class="nav">
       <div class="container row">
-        <h1 class="logo subTitle1 col-3">VR Contents Team SHINSULLOC</h1>
-        <ul class="menu h6 col-6 pre-3">
-          <li><a href="">오설록 in 제주</a></li>
-          <li><a href="">오설록 VR 투어</a></li>
-          <li><a href="">팀 소개</a></li>
+        <h1 class="logo subTitle1 col-3"><a href="/">VR Contents Team SHINSULLOC</a></h1>
+        <ul class="menu h6 col-6 prefix-3">
+          <li><a href="#inJeju">오설록 in JEJU</a></li>
+          <li><a href="#vrTour">오설록 VR 투어</a></li>
+          <li><a href="#team">팀 소개</a></li>
         </ul>
       </div>
     </div>
@@ -26,13 +27,13 @@
         <div class="mainText col-6">
           <p class="h5">차 한잔의 여유가 간절해지는 순간,<br>좋은 사람과 함께하면 삶은 더 아름다워 집니다.</p>
           <h3 class="h1">차와 제주가 선사하는<br>삶의 아름다움</h3>
-          <a href="" class="btn-ghost btn-large">오설록 VR투어 바로가기</a>      
+          <a href="#vrTour" class="btn-ghost btn-large">오설록 VR투어 바로가기</a>      
         </div>
       </div>
     </div>
-    <div class="inJeju">
+    <div class="inJeju" id="inJeju">
       <div class="container row">
-        <h2 class="h3 title col-12">오설록 <span class="h4">in 제주</span></h2>
+        <h2 class="h3 title col-12">오설록 <span class="h4">in JEJU</span></h2>
         <img src="./images/jejuMap.png" alt="">
         <ul class="terroir col-12">
           <li class="teaGarden1"><p class="h6">색(色)이 좋은</p><h3 class="h4">서광 차밭</h3></li>
@@ -40,13 +41,14 @@
           <li class="teaGarden3"><p class="h6">맛(味)이 좋은</p><h3 class="h4">한남 차밭</h3></li>
         </ul>
         <p class="body1 col-12">
-          제주는 엄청난 생명력을 가진, 2100여종의 식물자원이 분포하는 생태계 보고입니다.<br>
+          제주는 엄청난 생명력을 가진 2,100여종의 식물자원이 분포하는 생태계 보고입니다.<br>
           이러한 제주는 화산지역이라는 생태계적 특성을 가져 차 품질의 특이성을 만들어 냅니다.<br>
-          오설록의 차밭은 지리적 특성에 따라서 차의 특색이 조금씩 달라집니다. 이러한 개성을 지닌 오설록 3대 차밭의<br>찻잎들이 조화롭게 어루어져 오설록의 명차는 색(色), 향(香), 맛(味)이 뛰어납니다.
+          오설록의 차밭은 지리적 특성에 따라서 차의 특색이 조금씩 달라지는데,<br>
+          3대 차밭의 찻잎들이 조화롭게 어루어져 색(色), 향(香), 맛(味)이 뛰어납니다.
         </p>
       </div>
     </div>
-    <div class="vrTour container">
+    <div class="vrTour container" id="vrTour">
       <h2 class="a11yHidden">오설록 VR 투어</h2>
       <div class="row teaGarden col-12">
         <h3 class="h3">서광차밭</h3>
@@ -55,29 +57,25 @@
           오설록이 1983년부터 20여 년간 개간하여 척박한 땅을 웅비의 땅으로 변모시켜<br>
           현재는 우리나라에서 가장 광활한 유기농 차밭이 되었습니다.
         </p>
-        <a href="" class="btn-large btn-ghost-white">서광차밭 VR 투어</a>
+        <a href="" class="btn-large btn-ghost-white"><span class="icon_360"></span> 서광차밭 VR 투어</a>
       </div>
       <div class="row mainStation">
         <img src="./images/mainStation.png" alt="메인광장" class="col-6">
         <div class="explanation right col-6">
           <h3 class="h4 textColorPoint">메인광장</h3>
           <p>
-            오설록 티뮤지엄은 아모레퍼시픽이<br>
-            차와 한국 전통차 문화를 소개하고, 널리 보급하고자<br>
-            2001년 9월에 개관한 국내 최초의 차 박물관입니다.
+            제주 오설록은 세계적인 디자인 건축 전문사이트인<br>'디자인붐'이선정한 세계 10대 미술관에 오를만큼<br>안팎으로 아름다운 풍광을 자랑합니다.
           </p>
-          <a href="" class="btn-fill btn-small">메인광장 VR 투어</a>
+          <a href="" class="btn-fill btn-small"><span class="icon_360_white"></span> 메인광장 VR 투어</a>
         </div>
       </div>
       <div class="row teaMuseum">
         <div class="explanation left col-6">
           <h3 class="h4 textColorPoint">티뮤지엄</h3>
           <p>
-            우리 차 문화의 가치와 우수성을 널리 전파하는<br>
-            오설록 티뮤지엄은 한국 차 문화의 발상지이자<br>
-            국내 최대 규모의 차 종합 전시관입니다.
+            오설록 티뮤지엄은 아모레퍼시픽이<br>한국의 전통차와 그 문화를 소개하고, 널리 보급하고자<br>2001년 9월에 개관한 국내 최초의 차 박물관입니다.
           </p>
-          <a href="" class="btn-fill btn-small">티뮤지엄 VR 투어</a>
+          <a href="" class="btn-fill btn-small"><span class="icon_360_white"></span> 티뮤지엄 VR 투어</a>
         </div>
         <img src="./images/teaMuseum.png" alt="티뮤지엄" class="col-6">
       </div>
@@ -90,7 +88,7 @@
             추사 김정희 선생의 세한도와 추사체를 주제로한 미디어 아트를 비롯해<br>
             멋스러운 티타임 공간이 마련되어 있습니다.
           </p>
-          <a href="" class="btn-fill btn-small">티스톤 VR 투어</a>
+          <a href="" class="btn-fill btn-small"><span class="icon_360_white"></span> 티스톤 VR 투어</a>
         </div>
       </div>
       <div class="row innisfreeJeju">
@@ -100,7 +98,7 @@
             이니스프리 제주하우스는 청정섬 제주 원료로 만든<br>화장품, 천연 비누 만들기 체험공간, 제주의 신선한 식재료로 만든 오가닉 카페 등<br>
             제주 자연 속에서 오감을 만족시키는 체험과 휴식을 즐길 수 있는 공간입니다.
           </p>
-          <a href="" class="btn-fill btn-small">이니스프리 하우스 VR 투어</a>
+          <a href="" class="btn-fill btn-small"><span class="icon_360_white"></span> 이니스프리 하우스 VR 투어</a>
         </div>
         <img src="./images/innisfreeHouse.png" alt="이니스프리 하우스" class="col-6">
       </div>
@@ -111,7 +109,7 @@
         <iframe class="col-12" height="596" src="https://www.youtube.com/embed/LPwxjynAwLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="team container row">
+    <div class="team container row" id="team">
       <p class="h5 col-12">OSULLOC in JEJU VR Contents Team</p>
       <h2 class="h3 col-12">SHINSULLOC &lt;신<span>이내린</span> 설록&gt;</h2>
       <ul class="member col-12">

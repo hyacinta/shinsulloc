@@ -1,4 +1,4 @@
-@import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+@import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
 
 html {
   font-size: 10px;
@@ -191,7 +191,7 @@ secondary: #707070;
 /* button */
 
 [class*="btn-"] {
-  display: inline-block;
+  display: inline-flex;
   border-radius: 8px;
 }
 .btn-ghost {
@@ -214,4 +214,21 @@ secondary: #707070;
 .btn-large {
   padding: 12px 24px;
   font-size: 2rem;
+}
+[class*="icon_360"] {
+  display: inline-block;
+  margin-right: 12px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.icon_360 {
+  width: 28px;
+  height: 28px;
+  background-image: url('../images/ico_360.png');
+}
+.icon_360_white {
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/ico_360_white.png');
 }

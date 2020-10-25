@@ -15,13 +15,24 @@
   border-bottom: 1px solid #CECECE;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .05);
 }
-.nav .container {
-  display: flex;
-  flex-wrap: nowrap;
-}
+
 .logo {
+  display: flex;
+  align-items: center;
+  height: 79px;
+}
+.logo a {
+  display: block;
+  width: 215px;
+  height: 50px;
   margin: 0;
+  padding-top: 50px;
+  overflow: hidden;
   align-self: center;
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .menu {text-align: right;}
 .menu li {display: inline-block;}
@@ -97,6 +108,7 @@
   display: inline-block;
   padding: 0 60px;
   text-align: center;
+  cursor: pointer;
 }
 .terroir li::before {
   position: absolute;
@@ -263,12 +275,28 @@
 .footer .link li {margin: 0 5.6rem;}
 .footer .link a {
   display: block;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 1px solid transparent
+  padding: 4px;
+  border-bottom: 1px solid transparent
 }
 .footer .link img {
   width: auto;
   height: 36px;
 }
-.footer .link a:hover {border: 1px solid #324546;}
+.footer .link a:hover {border-bottom: 1px solid rgba(50, 69, 70, 0.5);}
+
+
+.btn_top {
+  display: block;
+  position: fixed;
+  bottom: 40px;
+  right: 120px;
+  width: 71px;
+  height: 50px;
+  padding-top: 50px;
+  overflow: hidden;
+  background-image: url('../images/btnTop.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 9999;
+}
