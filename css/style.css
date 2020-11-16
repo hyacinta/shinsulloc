@@ -96,8 +96,6 @@
   border: 1px solid #1C314F;
 }
 
-
-
 /* content 영역 top, bottom padding */
 .inJeju, .vrTour, .teaser, .team {
   padding-top: 12rem;
@@ -136,15 +134,15 @@
 }
 .terroir .teaGarden1 .dot {
   top: -180px;
-  left: 270px;
+  left: 287px;
 }
 .terroir .teaGarden2 .dot {
   top: -184px;
   left: 113px;
 }
 .terroir .teaGarden3 .dot {
-  top: -214px;
-  left: -98px;
+  top: -212px;
+  left: -106px;
 }
 .terroir h3 {
   margin-bottom: 0;
@@ -433,3 +431,70 @@
   transition: all 200ms ease-in;
 }
 .btn_top:focus {outline: none;}
+
+
+@media screen and (max-width: 1079px) {
+  .nav {padding: 0.8rem 0;}
+  .nav .logo {
+    height: 74px;
+    margin-bottom: 0;
+  }
+  .menu a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .terroir li {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  /* typography */
+  h1, h2, h3, h4, h5, h6, p{margin-bottom: 1.6rem;}
+  .h1 {font-size: 4.8rem;}
+  .h2 {font-size: 4rem;}
+  .h3 {font-size: 3.2rem;}
+  .h4 {font-size: 2.4rem;}
+  .h5 {font-size: 2rem;}
+  .h6 {font-size: 1.6rem;}
+
+  /* mainText */
+  .mainText h3 {line-height: 1.4;}
+  .mainText p {
+    margin-bottom: 0.8rem;
+  }
+  .mainText a {
+    margin-top: 2.4rem;
+  }
+  /* content 영역 top, bottom padding */
+  .inJeju, .vrTour, .teaser, .team {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .inJeju .title {margin-bottom: 5.6rem;}
+  .inJeju .terroir {
+    margin-top: 6.4rem;
+    margin-bottom: 4.8rem;
+  }
+  .terroir .teaGarden1 .dot {
+    top: -162px;
+    left: 168px;
+  }
+  .terroir .teaGarden2 .dot {
+    top: -166px;
+    left: 55px;
+  }
+  .terroir .teaGarden3 .dot {
+    top: -196px;
+    left: -47px;
+  }
+  .teaGarden {padding-top: 20rem;}
+  .vrTour .explanation.left {padding-right: 24px;}
+  .vrTour .explanation.right {padding-left: 24px;}
+  .vrTour .explanation {
+    height: initial;
+    padding-bottom: 56px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+}

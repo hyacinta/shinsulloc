@@ -67,6 +67,7 @@ img {vertical-align: top;}
 }
 
 /* layout */
+/* pc 1080 이상 */
 .wrap {
   position: relative;
   width: 100vw;
@@ -151,6 +152,50 @@ img {vertical-align: top;}
 .suffix-11 {margin-right: 1010px;}
 .suffix-12 {margin-right: 1100px;}
 
+
+/* 1080이하 */
+@media screen and (max-width: 1079px) {
+  .container {
+    width: 100%;
+    padding: 0 24px;
+  }
+  
+  [class*="col-"] {
+    width: initial;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .m-col-1 {width: 8.333%;}
+  .m-col-2 {width: 16.666%;}
+  .m-col-3 {width: 24.999%;}
+  .m-col-4 {width: 33.332%;}
+  .m-col-5 {width: 41.665%;}
+  .m-col-6 {width: 49.998%;}
+  .m-col-7 {width: 58.331%;}
+  .m-col-8 {width: 66.664%;}
+  .m-col-9 {width: 74.997%;}
+  .m-col-10 {width: 83.33%;}
+  .m-col-11 {width: 91.663%;}
+  .m-col-12 {width: 99.996%;}
+  
+  [class*="prefix-"] {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .m-prefix-1 {margin-left: 8.333%;}
+  .m-prefix-2 {margin-left: 16.666%;}
+  .m-prefix-3 {margin-left: 24.999%;}
+  .m-prefix-4 {margin-left: 33.332%;}
+  .m-prefix-5 {margin-left: 41.665%;}
+  .m-prefix-6 {margin-left: 49.998%;}
+  .m-prefix-7 {margin-left: 58.331%;}
+  .m-prefix-8 {margin-left: 66.664%;}
+  .m-prefix-9 {margin-left: 74.997%;}
+  .m-prefix-10 {margin-left: 83.33%;}
+  .m-prefix-11 {margin-left: 91.663%;}
+  .m-prefix-12 {margin-left: 99.996%;}
+}
 
 /* typography */
 h1, h2, h3, h4, h5, h6, p {margin-bottom: 2.4rem;}
