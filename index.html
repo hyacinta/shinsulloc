@@ -11,10 +11,10 @@
 </head>
 <body>
   <div class="wrap">
-    <a href="/shinsulloc" class="btn_top">상단으로 이동하기</a>
+    <button type="button" class="btn_top">상단으로 이동하기</button>
     <div class="nav">
       <div class="container row">
-        <h1 class="logo subTitle1 col-3"><a href="/shinsulloc">VR Contents Team SHINSULLOC</a></h1>
+        <h1 class="logo subTitle1 col-3"><a href="#">VR Contents Team SHINSULLOC</a></h1>
         <ul class="menu h6 col-6 prefix-3">
           <li><a href="#inJeju">오설록 in JEJU</a></li>
           <li><a href="#vrTour">오설록 VR 투어</a></li>
@@ -26,7 +26,10 @@
       <div class="container row">
         <h2 class="a11yHidden">메인 영역</h2>
         <div class="mainText col-6">
-          <p class="h5">차 한 잔의 여유가 간절해지는 순간,<br>좋은 사람과 함께하면 삶은 더 아름다워 집니다.</p>
+          <p class="h5">
+            <span>차 한 잔의 여유가 간절해지는 순간,</span>
+            <span>좋은 사람과 함께하면 삶은 더 아름다워 집니다.</span>
+          </p>
           <h3 class="h1">차와 제주가 선사하는<br>삶의 아름다움</h3>
           <a href="#teaGarden" class="btn-ghost btn-large">오설록 VR투어 바로가기</a>      
         </div>
@@ -37,9 +40,42 @@
         <h2 class="h3 title col-12">오설록 <span class="h4">in JEJU</span></h2>
         <img src="./images/jejuMap.png" alt="">
         <ul class="terroir col-12">
-          <li class="teaGarden1"><p class="h6">색(色)이 좋은</p><h3 class="h4">서광 차밭</h3></li>
-          <li class="teaGarden2"><p class="h6">향(香)이 좋은</p><h3 class="h4">돌송이 차밭</h3></li>
-          <li class="teaGarden3"><p class="h6">맛(味)이 좋은</p><h3 class="h4">한남 차밭</h3></li>
+          <li class="teaGarden1">
+            <i class="dot"></i>
+            <button type="button" class="popupBtn">
+              <p class="h6">색(色)이 좋은</p><h3 class="h4">서광 차밭</h3>
+            </button>
+            <div class="teaGardenInfo">
+              <h3 class="h4">색(色)이 좋은 서광 차밭</h3>
+              <p>산방산 근처의 서광 차밭은 대기가 한라산을 지나며 많은 구름과 안개를 형성하고, 이는 자연 차광 효과를 내 찻잎의 색을 좋게 만듭니다. 온화한 기후와 자연 차광 효과는 고급 품질의 차를 만들 때 더없이 좋은 생육 조건이 됩니다. 서광리는 전체가 돌밭이라고 해도 될 만큼 작물 재배가 어려운 곳이었지만, 1983년 개간을 시작해 척박한 땅에 새생명을 불어넣어 우리나라에서 가장 광대한 차밭을 조성하였습니다.</p>
+              <button type="button" class="btnPopupClose">닫기</button>
+            </div>
+            <div class="popupBg"></div>
+          </li>
+          <li class="teaGarden2">
+            <i class="dot"></i>
+            <button type="button" class="popupBtn">
+              <p class="h6">향(香)이 좋은</p><h3 class="h4">돌송이 차밭</h3>
+            </button>
+            <div class="teaGardenInfo">
+              <h3 class="h4">향(香)이 좋은 돌송이 차밭</h3>
+              <p>돌송이 차밭 지역은 예로부터 ‘화산재가 굳어서 돌멩이같이 잘게 부서진 돌덩이’가 많아 ‘돌송이’라고 불리어 왔습니다. 돌이 전부였던 황무지를 맨손으로 일궈낸 곳이라 오설록의 아름다운 집념이 가장 상징적으로 드러난 차밭입니다. 이곳은 산과 바다를 동시에 접하고 있어 매년 4월 한라산의 잔설을 품은 산바람과 바다의 수분을 머금은 바닷바람이 밤낮으로 불어와 돌송이 차밭에서 채엽한 녹차는 향이 매우 좋습니다.</p>
+              <button type="button" class="btnPopupClose">닫기</button>
+            </div>
+            <div class="popupBg"></div>
+          </li>
+          <li class="teaGarden3">
+            <i class="dot"></i>
+            <button type="button" class="popupBtn">
+              <p class="h6">맛(味)이 좋은</p><h3 class="h4">한남 차밭</h3>
+            </button>
+            <div class="teaGardenInfo">
+              <h3 class="h4">맛(味)이 좋은 한남 차밭</h3>
+              <p>과거 ‘해들이밭’이라 하여 마을에서 가장 먼저 해가 드는 곳이라 불렸던 한남 차밭은 아침부터 불어오는 따뜻한 바람 덕분에 사람과 자연이 모두 온화하게 성장할 수 있는 곳입니다. 한남 차밭은 유기농 재배와 효율적인 경작을 위해 많은 노력과 투자를 하여 질이 좋은 고품질의 녹차를 생산하고 있습니다.</p>
+              <button type="button" class="btnPopupClose">닫기</button>
+            </div>
+            <div class="popupBg"></div>
+          </li>
         </ul>
         <p class="body1 col-12">
           제주는 엄청난 생명력을 가진 2,100여종의 식물자원이 분포하는 생태계 보고입니다.<br>
