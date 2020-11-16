@@ -447,23 +447,10 @@
     padding-left: 24px;
     padding-right: 24px;
   }
-  /* typography */
-  h1, h2, h3, h4, h5, h6, p{margin-bottom: 1.6rem;}
-  .h1 {font-size: 4.8rem;}
-  .h2 {font-size: 4rem;}
-  .h3 {font-size: 3.2rem;}
-  .h4 {font-size: 2.4rem;}
-  .h5 {font-size: 2rem;}
-  .h6 {font-size: 1.6rem;}
-
   /* mainText */
   .mainText h3 {line-height: 1.4;}
-  .mainText p {
-    margin-bottom: 0.8rem;
-  }
-  .mainText a {
-    margin-top: 2.4rem;
-  }
+  .mainText p {margin-bottom: 0.8rem;}
+  .mainText a {margin-top: 2.4rem;}
   /* content 영역 top, bottom padding */
   .inJeju, .vrTour, .teaser, .team {
     padding-top: 8rem;
@@ -496,5 +483,37 @@
 }
 
 @media screen and (max-width: 480px) {
-  
+  .nav .logo {height: 40px;}
+  .nav .logo a {
+    width: 120px;
+    height: 32px;
+    padding-top: 32px;
+  }
+  .menu {text-align: center;}
+  .menu a {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .terroir li {border: none;}
+  .vrTour .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .vrTour .row > img {order: 0;}
+  .vrTour .row .explanation {
+    order: 1;
+    padding-top: 16px;
+    text-align: center;
+  }
+  .vrTour .row .explanation.left, .vrTour .row .explanation.right {text-align: center;}
+  .member > li {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .footer .link {flex-wrap: wrap;}
+  .footer .link li {
+    margin-bottom: 16px;
+  }
 }
