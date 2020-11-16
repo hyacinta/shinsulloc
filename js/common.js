@@ -10,8 +10,8 @@ const $teaGarden3 = document.querySelector('.teaGarden3');
 // EVENT
 window.onscroll = () => {
   $nav.classList.toggle('scroll', window.scrollY > 80);
-  $btnTop.style.bottom = window.scrollY > 500 ? '40px': '35px';
-  $btnTop.style.opacity = window.scrollY > 500 ? '1': '0';
+  $btnTop.style.bottom = window.scrollY > 400 ? '40px': '35px';
+  $btnTop.style.opacity = window.scrollY > 400 ? '1': '0';
 }
 $btnTop.onclick = () => window.scrollTo(0, 0);
 $logo.onclick = () => window.scrollTo(0, 0);

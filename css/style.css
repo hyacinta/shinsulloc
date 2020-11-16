@@ -34,6 +34,7 @@
   display: block;
   margin: 0.8rem 1.6rem;
   padding: 16px 8px;
+  border-bottom: 2px solid transparent;
 }
 .menu a:hover {
   color: #1C314F;
@@ -42,17 +43,20 @@
 .nav.scroll {
   padding: 0;
   color: #fff;
-  background-color: rgba(0, 0, 0, .3);
-  border-bottom: 1px solid rgba(0, 0, 0, .05);
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .05);
+  background-color: rgba(0, 0, 0, .5);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .1);
   transition: all 200ms ease-in;
 }
 .nav.scroll .logo {margin-bottom: 0;}
 .nav.scroll .menu a:hover {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
   color: #fff;
   border-bottom-color: rgba(255, 255, 255, .5);
 }
-
 
 /* visual */
 .visual {
@@ -72,6 +76,7 @@
   color: #1C314F;
 }
 .mainText p {margin-bottom: 1.6rem;}
+.mainText span {display: block;}
 .mainText a {
   position: relative;
   margin-top: 4rem;
@@ -84,8 +89,13 @@
   content: "";
   display: block;
   height: 1px;
-  background-color: #1C314F;
+  background-color: rgba(28, 49, 49, .9);
 }
+.visual .btn-ghost:hover {
+  color: inherit;
+  border: 1px solid #1C314F;
+}
+
 
 
 /* content 영역 top, bottom padding */
@@ -116,7 +126,7 @@
   border-right: 1px solid rgba(50, 69, 70, .3);
 }
 .terroir li:last-child {border-right: none;}
-.terroir li .dot {
+.terroir .dot {
   position: absolute;
   display: block;
   width: 12px;
@@ -124,28 +134,28 @@
   border-radius: 6px;
   background-color: #dedede;
 }
-.terroir li.teaGarden1 .dot {
+.terroir .teaGarden1 .dot {
   top: -180px;
   left: 270px;
 }
-.terroir li.teaGarden2 .dot {
+.terroir .teaGarden2 .dot {
   top: -184px;
   left: 113px;
 }
-.terroir li.teaGarden3 .dot {
+.terroir .teaGarden3 .dot {
   top: -214px;
   left: -98px;
 }
-.terroir li h3 {
+.terroir h3 {
   margin-bottom: 0;
   padding: 0 4px 6px;
   border-bottom: 4px solid transparent;
 }
-.terroir li p {
+.terroir p {
   display: inline-block;
   margin-bottom: 0.8rem;
 }
-.terroir li button {
+.terroir button {
   background-color: transparent;
   color: inherit;
 }
@@ -154,10 +164,10 @@
   margin-bottom: 0;
 }
 .terroir button p {padding-bottom: 0.8rem;}
-.terroir li:hover button h3, .terroir li.active button h3 {border-bottom: 4px solid rgba(50, 69, 70, .5);}
+.terroir button:hover h3, .terroir .active button h3 {border-bottom: 4px solid rgba(50, 69, 70, .5);}
 .terroir button:focus {outline: none;}
-.terroir li:hover .dot {background-color: #b6cd3f;}
-.terroir li:hover .dot::before {
+.terroir button.popupBtn:hover + .dot {background-color: #b6cd3f;}
+.terroir button.popupBtn:hover + .dot::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -168,12 +178,7 @@
   height: 12px;
   border-radius: 6px;
   background-color: #dedede;
-  animation-iteration-count: infinite;
-  animation-duration: 900ms;
-}
-.terroir li:hover .dot::before {
-  animation-name: hoverAni;
-  animation-timing-function: cubic-bezier(0,0,.58,1);
+  animation: hoverAni 900ms cubic-bezier(0,0,.58,1) infinite;
 }
 @keyframes hoverAni {
   0% {
