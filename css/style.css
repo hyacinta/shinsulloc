@@ -1,21 +1,15 @@
 /* navigation */
 .nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   padding-top: 4rem;
   color: #1C314F;
-  z-index: 9999;
+  border-bottom: 1px solid rgba(0, 0, 0, .0);
+  transition: all 200ms ease-in;
+  z-index: 500;
 }
-.nav.scroll {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  background-color: rgba(255, 255, 255, .5);
-  border-bottom: 1px solid #CECECE;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .05);
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -38,13 +32,25 @@
 .menu li {display: inline-block;}
 .menu a {
   display: block;
-  margin: 0.8rem;
-  padding: 16px;
-  text-shadow:0 0 10px #fff;
+  margin: 0.8rem 1.6rem;
+  padding: 16px 8px;
 }
 .menu a:hover {
   color: #1C314F;
   border-bottom: 2px solid rgba(28,49,79, 0.5);
+}
+.nav.scroll {
+  padding: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .3);
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .05);
+  transition: all 200ms ease-in;
+}
+.nav.scroll .logo {margin-bottom: 0;}
+.nav.scroll .menu a:hover {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, .5);
 }
 
 

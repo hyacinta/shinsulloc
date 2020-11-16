@@ -1,2 +1,7 @@
+// DOM
 const $nav = document.querySelector(".nav");
-console.log("nav", $nav);
+
+// EVENT
+window.onscroll = () => {
+  $nav.classList.toggle('scroll', window.scrollY > 80);
+}
