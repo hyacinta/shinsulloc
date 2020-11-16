@@ -343,7 +343,7 @@
 .btn_top {
   display: block;
   position: fixed;
-  bottom: 40px;
+  bottom: -50px;
   right: 120px;
   width: 71px;
   height: 50px;
@@ -354,4 +354,6 @@
   background-position: center;
   background-size: contain;
   z-index: 9999;
+  transition: all 200ms ease-in;
 }
+.btn_top:focus {outline: none;}
