@@ -1,62 +1,63 @@
-/* navigation */
+/* 공용 */
+.wrap {position: relative;}
+
+/* nav */
 .nav {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  padding-top: 4rem;
   color: #1C314F;
   border-bottom: 1px solid rgba(0, 0, 0, .0);
   transition: all 200ms ease-in;
   z-index: 500;
 }
-.logo {
+.nav .container {
   display: flex;
   align-items: center;
-  height: 79px;
+  justify-content: space-between;
 }
-.logo a {
-  display: block;
+.logo {
   width: 215px;
   height: 50px;
-  margin: 0;
+  margin-bottom: 0;
   padding-top: 50px;
-  overflow: hidden;
-  align-self: center;
   background-image: url('../images/logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  overflow: hidden;
+  transition: all 200ms ease-out;
 }
-.menu {text-align: right;}
+.logo:hover {
+  transform: scale(1.1);
+  transition: all 200ms ease-out;
+}
+.menu {
+  text-align: right;
+  flex-grow: 1;
+}
 .menu li {display: inline-block;}
 .menu a {
   display: block;
-  margin: 0.8rem 1.6rem;
-  padding: 16px 8px;
+  margin: 0 1em;
+  padding: 1em 0.5em;
   border-bottom: 2px solid transparent;
 }
-.menu a:hover {
-  color: #1C314F;
-  border-bottom: 2px solid rgba(28,49,79, 0.5);
-}
+.menu a:hover {border-bottom: 2px solid rgba(28,49,79, 0.5);}
 .nav.scroll {
-  padding: 0;
+  padding-top: 0;
   color: #fff;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .1);
   transition: all 200ms ease-in;
 }
-.nav.scroll .logo {margin-bottom: 0;}
-.nav.scroll .menu a:hover {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  color: #fff;
-  border-bottom-color: rgba(255, 255, 255, .5);
+.nav.scroll .menu a {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
+.nav.scroll .menu a:hover {border-bottom-color: rgba(255, 255, 255, .5);}
 
 /* visual */
 .visual {
@@ -67,361 +68,184 @@
   background-size: cover;
   background-position: top center;
 }
-.mainText {
+.visual .mainText {
   position: absolute;
   top: 0;
   bottom: 0;
-  height: 372px;
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 0;
   color: #1C314F;
 }
-.mainText p {margin-bottom: 1.6rem;}
-.mainText span {display: block;}
-.mainText a {
+.visual h3 {
+  order:1;
+  width: 100%;
+}
+.visual p {width: 100%;}
+.visual a {
+  order: 2;
   position: relative;
-  margin-top: 4rem;
+  transition: all 200ms ease-out;
 }
-.visual .btn-ghost:hover::after {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 12px;
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: rgba(28, 49, 49, .9);
-}
-.visual .btn-ghost:hover {
-  color: inherit;
-  border: 1px solid #1C314F;
+.visual a:hover {
+  color: #fff;
+  background-color: rgba(28, 49, 49, .5);
+  border-color: rgba(28, 49, 49, .6);
+  transition: all 200ms ease-out;
 }
 
-/* content 영역 top, bottom padding */
-.inJeju, .vrTour, .teaser, .team {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-}
-
-/* in JEJU */
+/* inJeju */
 .inJeju {
   text-align: center;
   background-image: url('../images/inJeju_bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  color: #324546;
-}
-.inJeju .title {margin-bottom: 8rem;}
-.inJeju .terroir {
-  margin-top: 8rem;
-  margin-bottom: 6.4rem;
 }
 .terroir li {
   position: relative;
   display: inline-block;
-  padding: 8px 60px 0;
+  padding: 0.5em 3em 0;
   text-align: center;
   border-right: 1px solid rgba(50, 69, 70, .3);
 }
 .terroir li:last-child {border-right: none;}
-.terroir .dot {
-  position: absolute;
+.terroir li h3 span {
   display: block;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-  background-color: #dedede;
 }
-.terroir .teaGarden1 .dot {
-  top: -180px;
-  left: 287px;
-}
-.terroir .teaGarden2 .dot {
-  top: -184px;
-  left: 113px;
-}
-.terroir .teaGarden3 .dot {
-  top: -212px;
-  left: -106px;
-}
-.terroir h3 {
-  margin-bottom: 0;
-  padding: 0 4px 6px;
-  border-bottom: 4px solid transparent;
-}
-.terroir p {
-  display: inline-block;
-  margin-bottom: 0.8rem;
-}
-.terroir button {
-  background-color: transparent;
-  color: inherit;
-}
-.terroir button h3, .terroir button p {
-  width: 100%;
-  margin-bottom: 0;
-}
-.terroir button p {padding-bottom: 0.8rem;}
-.terroir button:hover h3, .terroir .active button h3 {border-bottom: 4px solid rgba(50, 69, 70, .5);}
-.terroir button:focus {outline: none;}
-.terroir button.popupBtn:hover + .dot {background-color: #b6cd3f;}
-.terroir button.popupBtn:hover + .dot::before {
+.terroirInfo {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-  background-color: #dedede;
-  animation: hoverAni 900ms cubic-bezier(0,0,.58,1) infinite;
-}
-@keyframes hoverAni {
-  0% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  100% {
-    transform: scale(5);
-    opacity: 0;
-  }
-}
-.terroir li .teaGardenInfo {
   display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 640px;
-  height: 300px;
-  margin: auto;
-  padding: 44px 32px 32px;
-  text-align: justify;
-  border-radius: 24px;
-  background-color: #fff;
-  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
-  z-index: 9999;
 }
-.terroir li .teaGardenInfo h3 {
-  margin-bottom: 2.4rem;
-  text-align: center;
-}
-.terroir li .teaGardenInfo + .popupBg {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 9000;
-}
-.terroir .btnPopupClose {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  padding-top: 24px;
-  background: url("../images/ico_close.png") no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-.terroir li.active .teaGardenInfo {display: block;}
-.terroir li.active .teaGardenInfo + .popupBg {display: block;}
-
-/* vrTour */
-.vrTour .row {margin-bottom: 10rem;}
 
 /* 서광차밭 */
 .teaGarden {
-  padding-top: 30rem;
-  padding-bottom: 8rem;
   background-image: url('../images/teaGarden_bg.jpg');
   background-size: cover;
   text-align: center;
   color: #fff;
 }
 .teaGarden h3, .teaGarden p {text-shadow: 0 0 5px rgba(0, 0, 0, .1);}
-.teaGarden p {
-  line-height: 2;
-}
+.teaGarden p {line-height: 2;}
 .teaGarden .btn-ghost-white {
   position: relative;
   margin-top: 2.4rem;
   padding: 8px 20px;
 }
-
-.teaGarden .btn-ghost-white:hover {
-  background-color: rgba(255, 255, 255, 1);
-  border-bottom-color: transparent;
-}
-.teaGarden a:hover::after {
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 6px;
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: rgba(50, 69, 70, 1);
+.terroirExplanation, .teaGardenExplanation {
+  max-width: 752px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
 }
 
-.vrTour .explanation {
+/* VR Tour */
+.vrTour .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.vrTour .row:last-child {margin-bottom: 0;}
+.vrTour .explanation > h3 {color: #27393a;}
+.explanation {
   position: relative;
-  height: 322px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 0.5em 1em;
 }
-.vrTour .explanation.left {
-  text-align: right;
-  padding-right: 16px;
-}
-.vrTour .explanation.right {padding-left: 16px;}
+.explanation.left {text-align: right;}
+.explanation.right {order:1;}
 
-.vrTour .explanation a.btn-fill {
-  position: absolute;
-  bottom: 16px;
-}
-.vrTour .explanation.right a.btn-fill {left: 16px;}
-.vrTour .explanation.left a.btn-fill {right: 16px;}
-.vrTour .explanation a:hover {
-  color: #fff;
-  background-color: rgba(50, 69, 70, 1);
-}
-.vrTour .explanation a:hover::after {
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 8px;
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: rgba(255, 255, 255, .5);
-}
-
-
-/* team 영상 */
+/* teaser 영상 */
 .teaser {background-color: #202020;}
 
-/* 팀 소개 */
-.team {
-  text-align: center;
-  color: #324546;
-}
-
-.team h2 {
-  height: 80px;
-  padding-top: 80px;
+/* team 소개 */
+.team {text-align: center;}
+.team .title {
+  height: 1.5em;
+  padding-top: 1.5em;
   background-image: url('../images/teamLogo.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
 }
-
 .member {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 5.6rem;
 }
 .member > li {
-  width: 30%;
-  margin-left: 8px;
-  margin-right: 8px;
-  padding: 16px 16px 24px;
+  display: flex;
+  padding: 1em 1em 1.5em;
   border-radius: 16px;
   background-color: #f5f5f5;
   border: 1px solid #f0f0f0;
   text-align: center;
 }
-
 .member h3 {
   position: relative;
   display: inline-block;
-  margin-bottom: 16px;
-  padding-top: 16px;
-  padding-right: 24px;
+  margin-bottom: 1.6rem;
+  padding-top: 0.5em;
+  padding-right: 2.4rem;
 }
 .member h3::after {
   content: "";
-  position: absolute;
-  top: 4px;
-  right: -24px;
   display: block;
-  width: 40px;
-  height: 40px;
+  position: absolute;
   background-image: url('../images/leaf.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.member .info {
+.member .contactInfo {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  font-size: 2rem;
   color: #707070;
 }
-
 .icon_mail, .icon_facebook, .icon_instagram {
   display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0 8px;
-  padding-top: 24px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-} 
+}
 .icon_mail {background-image: url('../images/icon_mail.png');}
 .icon_facebook {background-image: url('../images/icon_facebook.png');}
 .icon_instagram {background-image: url('../images/icon_instagram.png');}
 
-/* footer */
+
 .footer {
-  padding: 80px 0 40px;
   background-color: #f6f6f6;
   text-align: center;
-  color: #324546;
 }
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer h2, .footer p, .footer ul {width: 100%;}
+.footer h2.title {order: 1;}
+.footer p.title {
+  order: 0;
+  margin-bottom: 0;
+}
+.footer p, .footer ul {order: 2;}
 .footer p {margin-bottom: 0.4rem;}
-.footer .copy {margin-top: 2.4rem;}
+
 .footer .link {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
-  margin-bottom: 8rem;
 }
-.footer .link li {margin: 0 5.6rem;}
 .footer .link a {
   display: block;
   padding: 4px;
   border-bottom: 1px solid transparent
 }
-.footer .link img {
-  width: auto;
-  height: 36px;
-}
-.footer .link a:hover {border-bottom: 1px solid rgba(50, 69, 70, 0.5);}
-
+.footer .link img {width: auto;}
 
 .btn_top {
   display: block;
   position: fixed;
-  bottom: -50px;
-  right: 80px;
-  width: 71px;
-  height: 50px;
-  padding-top: 50px;
   overflow: hidden;
   background-image: url('../images/btnTop.png');
   background-repeat: no-repeat;
@@ -433,87 +257,334 @@
 .btn_top:focus {outline: none;}
 
 
-@media screen and (max-width: 1079px) {
-  .nav {padding: 0.8rem 0;}
-  .nav .logo {
-    height: 74px;
-    margin-bottom: 0;
-  }
-  .menu a {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .terroir li {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  /* mainText */
-  .mainText h3 {line-height: 1.4;}
-  .mainText p {margin-bottom: 0.8rem;}
-  .mainText a {margin-top: 2.4rem;}
+/* PC (해상도 1080px ~)*/
+@media all and (min-width:1080px) {
+  .nav {padding-top: 4rem;}
+  .visual .mainText {height: 394px;}
+  .visual p {margin-bottom: 1.6rem;}
+  .visual a {margin-top: 4rem;}
   /* content 영역 top, bottom padding */
-  .inJeju, .vrTour, .teaser, .team {
-    padding-top: 8rem;
+  .inJeju, .teaGarden, .vrTour, .teaser, .team, .footer {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+    
+  /* inJeju */
+  .inJeju .title {margin-bottom: 8rem;}
+  .terroir {
+    margin-top: 8rem;
+    margin-bottom: 6.4rem;
+  }
+  .teaGarden {
+    padding-top: 24rem;
     padding-bottom: 8rem;
   }
-  .inJeju .title {margin-bottom: 5.6rem;}
-  .inJeju .terroir {
-    margin-top: 6.4rem;
-    margin-bottom: 4.8rem;
+
+  /* VR Tour */
+  .vrTour .row {margin-bottom: 8rem;}
+  .explanation.left {padding-left: 0;}
+  .explanation.right {padding-right: 0;}
+  /* team 소개 */
+  .member {margin-top: 5.6rem;}
+  .member > li {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 30%;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
   }
-  .terroir .teaGarden1 .dot {
-    top: -162px;
-    left: 168px;
+  .member > li ul {width: 100%;}
+  .member h3::after {
+    top: 8px;
+    right: -24px;
+    width: 40px;
+    height: 40px;
   }
-  .terroir .teaGarden2 .dot {
-    top: -166px;
-    left: 55px;
+  .icon_mail, .icon_facebook, .icon_instagram {
+    width: 2em;
+    height: 2em;
+    margin: 0 1em;
+    padding-top: 2.5em;
   }
-  .terroir .teaGarden3 .dot {
-    top: -196px;
-    left: -47px;
+
+  /* footer */
+  .footer .link {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
   }
-  .teaGarden {padding-top: 20rem;}
-  .vrTour .explanation.left {padding-right: 24px;}
-  .vrTour .explanation.right {padding-left: 24px;}
-  .vrTour .explanation {
-    height: initial;
-    padding-bottom: 56px;
+  .footer .link li {margin: 0 5.6rem;}
+  .footer .link img {height: 36px;}
+  .footer p.copyright {margin-top: 2.4rem;}
+  .btn_top {
+    bottom: -50px;
+    right: 80px;
+    width: 4em;
+    height: 3em;
+    padding-top: 3em;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .nav .logo {height: 40px;}
-  .nav .logo a {
-    width: 120px;
-    height: 32px;
-    padding-top: 32px;
+/* 테블릿 가로 (해상도 768px ~ 1079px)*/
+@media all and (min-width:768px) and (max-width:1079px) {
+  .tHidden {display: none;}
+  .nav {padding-top: 3.2rem;}
+  .visual .mainText {
+    height: 330px;
+    padding-left: 8px;
   }
-  .menu {text-align: center;}
-  .menu a {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
+  .visual p {margin-bottom: 1.2rem;}
+  .visual a {margin-top: 3.2rem;}
+  /* content 영역 top, bottom padding */
+  .inJeju, .teaGarden, .vrTour, .teaser, .team, .footer {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
-  .terroir li {border: none;}
-  .vrTour .row {
-    display: flex;
+    
+  /* inJeju */
+  .inJeju .title {margin-bottom: 6.4rem;}
+  .terroir {
+    margin-top: 6.4rem;
+    margin-bottom: 4.8rem;
+  }
+
+  /* 서광차밭 */
+  .teaGarden {
+    padding-top: 16rem;
+    padding-bottom: 8rem;
+  }
+
+  /* VR Tour */
+  .vrTour .row {margin-bottom: 6rem;}
+  .explanation.left {padding-left: 0;}
+  .explanation.right {padding-right: 0;}
+  
+  /* team 소개 */
+  .member {margin-top: 4.8rem;}
+  .member > li {
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 30%;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
   }
-  .vrTour .row > img {order: 0;}
-  .vrTour .row .explanation {
-    order: 1;
-    padding-top: 16px;
+  .member > li ul {width: 100%;}
+
+  .member h3::after {
+    top: 0;
+    right: -16px;
+    width: 32px;
+    height: 32px;
+  }
+  .icon_mail, .icon_facebook, .icon_instagram {
+    width: 2em;
+    height: 2em;
+    margin: 0 1em;
+    padding-top: 2.5em;
+  }
+
+  /* footer */
+  .footer .link {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+  .footer .link li {margin: 0 4.8rem;}
+  .footer .link img {height: 32px;}
+  .footer p.copyright {margin-top: 2.4rem;}
+  .btn_top {
+    right: 40px;
+    width: 3em;
+    height: 2.5em;
+    padding-top: 2.5em;
+  }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 767px)*/
+@media all and (max-width:767px) {
+  .mHidden {display: none;}
+  .nav {padding-top: 2.4rem;}
+  .nav .container {flex-wrap: wrap;}
+  .logo {
+    width: 180px;
+    height: 40px;
+    padding-top: 35px;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .menu li {
+    flex-grow: 1;
     text-align: center;
   }
-  .vrTour .row .explanation.left, .vrTour .row .explanation.right {text-align: center;}
-  .member > li {
+  .menu a {
+    margin: 0 0.5em;
+    padding: 0.5em;
+  }
+  .nav.scroll {padding-top: 1em;}
+  .visual .mainText {
+    height: 301px;
+    padding-left: 8px;
+  }
+  .visual p {margin-bottom: 1.2rem;}
+  .visual a {margin-top: 2.4rem;}
+
+  /* content 영역 top, bottom padding */
+  .inJeju, .teaGarden, .vrTour, .teaser, .team, .footer {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  
+  /* inJeju */
+  .inJeju .title {margin-bottom: 4.8rem;}
+  .terroir {
+    width: 95%;
+    margin: 4.8rem auto 3.2rem;
+  }
+  .terroir li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 0.5em;
+    border-right: none;
+    border-bottom: 1px solid rgba(50, 69, 70, .3);
+  }
+  .terroir li:last-child {border-bottom: none;}
+  .terroir li h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .terroir li h3 span:first-child {padding-right: 0.5em;}
+  .terroir li h3 span {
+    display: inline-block;
+  }
+  .terroirExplanation {
+    width: 95%;
+    max-width: initial;
+  }
+  
+  /* 서광차밭 */
+  .teaGarden {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+  }
+
+  /* VR tour */
+  .vrTour .row {margin-bottom: 4rem;}
+  .explanation.left, .explanation.right {
+    order: 1;
+    padding-top: 1em;
+    text-align: left;
+  }
+  .explanation h3 {
+    margin-top: 0.4rem;
+    margin-bottom: 1.6rem;
+  }
+  .explanation a {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+
+  /* team 소개 */
+  .member {
     width: 100%;
-    margin-bottom: 16px;
+    max-width: 480px;
+    margin: 4rem auto 0;
   }
-  .footer .link {flex-wrap: wrap;}
-  .footer .link li {
-    margin-bottom: 16px;
+  .member > li {
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0.8rem;
+    padding: 1em 1em 1.25em;
   }
+  .member h3 {margin-bottom: 0;}
+  .member h3::after {
+    top: 0;
+    right: -16px;
+    width: 32px;
+    height: 32px;
+  }
+  .icon_mail, .icon_facebook, .icon_instagram {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 0.5em;
+    padding-top: 2em;
+  }
+
+  /* footer */
+  .footer .link {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: 2rem auto 4rem;
+  }
+  .footer .link li {margin: 0;}
+  .footer .link img {height: 28px;}
+  .footer p.copyright {margin-top: 1.6rem;}
+
+  .btn_top {
+    right: 40px;
+    width: 3em;
+    height: 2.5em;
+    padding-top: 2.5em;
+  }
+}
+
+/* 모바일 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+  .mHidden {display: none;}
+  .nav {padding-top: 1.6rem;}
+  .visual .mainText {
+    height: 237px;
+    padding-left: 8px;
+  }
+  .visual p {margin-bottom: 0.8rem;}
+  .visual a {margin-top: 1.6rem;}
+  /* content 영역 top, bottom padding */
+  .inJeju, .teaGarden, .vrTour, .teaser, .team, .footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+    
+  /* inJeju */
+  .inJeju .title {margin-bottom: 3.2rem;}
+  .jejuMap {width: 340px;}
+  .terroir {
+    margin-top: 3.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  /* 서광 차밭 */
+  .teaGarden {
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+  }
+
+  /* VR tour */
+  .vrTour .row {margin-bottom: 2rem;}
+
+  /* team 소개 */
+  .member {margin-top: 3.2rem;}
+  .member h3::after {
+    top: 0px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+  }
+
+  /* footer */
+  .footer .link {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .footer .link li {margin: 0 0.8rem;}
+  .footer .link img {height: 20px;}
+  .footer p.copyright {margin-top: 1.6rem;}
+  .btn_top {right: 20px;}
 }
