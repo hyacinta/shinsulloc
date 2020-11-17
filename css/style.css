@@ -47,7 +47,7 @@
 .menu a:hover {border-bottom: 2px solid rgba(28,49,79, 0.5);}
 .nav.scroll {
   padding-top: 0;
-  color: #fff;
+  color: rgba(255, 255, 255, .7);
   background-color: rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .1);
@@ -57,7 +57,10 @@
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-.nav.scroll .menu a:hover {border-bottom-color: rgba(255, 255, 255, .5);}
+.nav.scroll .menu a:hover {
+  border-bottom-color: rgba(255, 255, 255, .5);
+  color: #fff;
+}
 
 /* visual */
 .visual {
@@ -102,6 +105,49 @@
   background-size: cover;
   background-position: top center;
 }
+.jejuMap {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+.jejuMap img {max-width: 100%;}
+.jejuMap .dot {
+  position: absolute;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #f0f0f0;
+}
+.jejuMap .dot1 {
+  left: 86px;
+  bottom: 86px;
+}
+.jejuMap .dot2 {
+  left: 176px;
+  bottom: 92px;
+}
+.jejuMap .dot3 {
+  left: 240px;
+  bottom: 120px;
+}
+.jejuMap .dot.active {background-color:  #B6CD3F;}
+.jejuMap .dot.active:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  animation: aniHover 0.9s cubic-bezier(.17,.67,.83,.67) infinite;}
+@keyframes aniHover {
+  from {
+    transform: scale(1);
+    opacity: .9; }
+  to {
+    transform: scale(5);
+    opacity: 0; } 
+}
 .terroir li {
   position: relative;
   display: inline-block;
@@ -110,9 +156,17 @@
   border-right: 1px solid rgba(50, 69, 70, .3);
 }
 .terroir li:last-child {border-right: none;}
-.terroir li h3 span {
+.terroir h3 {cursor: pointer;}
+.terroir h3 span:first-child {
   display: block;
+  color:#3e5a5b;
 }
+.terroir h3 span:last-child {
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  border-bottom: 3px solid #3e5a5b00;
+}
+.terroir h3:hover span:last-child {border-bottom: 3px solid #3e5a5b;}
 .terroirInfo {
   position: absolute;
   display: none;
@@ -203,6 +257,15 @@
   flex-wrap: wrap;
   color: #707070;
 }
+.member .contactInfo a {
+  opacity: .85;
+  transition: all 200ms ease;
+}
+.member .contactInfo a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: all 200ms ease;
+}
 .icon_mail, .icon_facebook, .icon_instagram {
   display: block;
   overflow: hidden;
@@ -239,10 +302,17 @@
 .footer .link a {
   display: block;
   padding: 4px;
-  border-bottom: 1px solid transparent
+  border-bottom: 1px solid transparent;
+  opacity: 0.9;
+  transition: all 200ms ease;
 }
 .footer .link img {width: auto;}
-
+.footer .link a:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: all 200ms ease;
+}
+.footer p a:hover {text-decoration: underline;}
 .btn_top {
   display: block;
   position: fixed;
@@ -359,6 +429,9 @@
   .explanation.left {padding-left: 0;}
   .explanation.right {padding-right: 0;}
   
+  /* teaser */
+  /* height 607px */
+
   /* team 소개 */
   .member {margin-top: 4.8rem;}
   .member > li {
@@ -458,10 +531,14 @@
     align-items: center;
     margin-bottom: 0;
   }
-  .terroir li h3 span:first-child {padding-right: 0.5em;}
-  .terroir li h3 span {
+  
+  .terroir li h3 span, .terroir li h3 span:last-child, .terroir li h3:hover span:last-child {
     display: inline-block;
+    border-bottom: none;
   }
+  .terroir li h3 span:first-child {padding-right: 0.5em;}
+  .terroir li h3 {border-bottom: 2px solid #3e5a5b00;}
+  .terroir li h3:hover {border-bottom: 2px solid #3e5a5b;}
   .terroirExplanation {
     width: 95%;
     max-width: initial;
@@ -489,6 +566,9 @@
     top: 1em;
     right: 1em;
   }
+
+  /* teaser */
+  /* height 432px */
 
   /* team 소개 */
   .member {
@@ -527,13 +607,7 @@
   .footer .link li {margin: 0;}
   .footer .link img {height: 28px;}
   .footer p.copyright {margin-top: 1.6rem;}
-
-  .btn_top {
-    right: 40px;
-    width: 3em;
-    height: 2.5em;
-    padding-top: 2.5em;
-  }
+  .btn_top {display: none;}
 }
 
 /* 모바일 세로 (해상도 ~ 479px)*/
@@ -554,7 +628,7 @@
     
   /* inJeju */
   .inJeju .title {margin-bottom: 3.2rem;}
-  .jejuMap {width: 340px;}
+  .jejuMap {width: 320px;}
   .terroir {
     margin-top: 3.2rem;
     margin-bottom: 1.6rem;
@@ -565,9 +639,28 @@
     padding-top: 12rem;
     padding-bottom: 4rem;
   }
-
+  .jejuMap .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+  .jejuMap .dot1 {
+    left: 70px;
+    bottom: 70px;
+  }
+  .jejuMap .dot2 {
+    left: 138px;
+    bottom: 73px;
+  }
+  .jejuMap .dot3 {
+    left: 190px;
+    bottom: 97px;
+  }
   /* VR tour */
   .vrTour .row {margin-bottom: 2rem;}
+
+  /* teaser */
+  /* height 270px */
 
   /* team 소개 */
   .member {margin-top: 3.2rem;}
@@ -586,5 +679,4 @@
   .footer .link li {margin: 0 0.8rem;}
   .footer .link img {height: 20px;}
   .footer p.copyright {margin-top: 1.6rem;}
-  .btn_top {right: 20px;}
 }
