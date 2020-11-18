@@ -505,7 +505,7 @@
   }
   .menu a, .nav.scroll .menu a  {
     margin: 0 0.5em;
-    padding: 1em;
+    padding: 1em 0.7em;
   }
   .nav.scroll {padding-top: 1em;}
   .visual .mainText {
